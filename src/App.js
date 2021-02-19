@@ -1,10 +1,10 @@
 import './App.css';
-import CounterHooks from './components/CounterHooks';
+import FormHook from './components/FormHook';
 
 function App() {
   return (
     <div className="App">
-      <CounterHooks></CounterHooks>
+      <FormHook></FormHook>
     </div>
   );
 }

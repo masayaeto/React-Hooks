@@ -1,12 +1,14 @@
 import './App.css';
 // import FormHook from './components/FormHook';
-import ItemHook from './components/ItemHook';
+// import ItemHook from './components/ItemHook';
+// import EffectHook from './components/EffectHook';
+// import DataFetch from './components/DataFetch';
+import DataFetchById from './components/DataFetchById';
 
 function App() {
   return (
     <div className="App">
-      {/* <FormHook></FormHook> */}
-      <ItemHook></ItemHook>
+      <DataFetchById></DataFetchById>
     </div>
   );
 }

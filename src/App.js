@@ -1,14 +1,20 @@
 import './App.css';
-// import FormHook from './components/FormHook';
-// import ItemHook from './components/ItemHook';
-// import EffectHook from './components/EffectHook';
-// import DataFetch from './components/DataFetch';
-import DataFetchById from './components/DataFetchById';
+import React, {createContext, useState} from 'react'
+import ComponentC from './components/ComponentC';
+
+export const UserContext = createContext()
+export const LanguageContext = createContext()
 
 function App() {
+  const [user, setUser] = useState({name: "yamada", age: "32"})
+  const [language, setLanguage] = useState("日本語")
   return (
     <div className="App">
-      <DataFetchById></DataFetchById>
+      <UserContext.Provider value={user}>
+        <LanguageContext.Provider value={language}>
+          <ComponentC/>
+        </LanguageContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
